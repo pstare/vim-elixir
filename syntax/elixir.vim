@@ -140,7 +140,9 @@ syn region elixirDocString matchgroup=elixirSigilDelimiter  start=+\%(@\w*doc\s\
 
 " Defines
 syn match elixirDefine              '\<def\>\(:\)\@!'             nextgroup=elixirFunctionDeclaration    skipwhite skipnl
+syn match elixirAwDefine            '\<adef\>\(:\)\@!'            nextgroup=elixirFunctionDeclaration    skipwhite skipnl
 syn match elixirPrivateDefine       '\<defp\>\(:\)\@!'            nextgroup=elixirFunctionDeclaration    skipwhite skipnl
+syn match elixirAwPrivateDefine     '\<adefp\>\(:\)\@!'           nextgroup=elixirFunctionDeclaration    skipwhite skipnl
 syn match elixirModuleDefine        '\<defmodule\>\(:\)\@!'       nextgroup=elixirModuleDeclaration      skipwhite skipnl
 syn match elixirProtocolDefine      '\<defprotocol\>\(:\)\@!'     nextgroup=elixirProtocolDeclaration    skipwhite skipnl
 syn match elixirImplDefine          '\<defimpl\>\(:\)\@!'         nextgroup=elixirImplDeclaration        skipwhite skipnl
@@ -175,7 +177,9 @@ syn match  elixirExUnitAssert "\(^\s*\)\@<=\<\(catch_exit\|catch_throw\|flunk\|r
 hi def link elixirBlockInline            Keyword
 hi def link elixirBlockDefinition        Keyword
 hi def link elixirDefine                 Define
+hi def link elixirAwDefine               Define
 hi def link elixirPrivateDefine          Define
+hi def link elixirAwPrivateDefine        Define
 hi def link elixirModuleDefine           Define
 hi def link elixirProtocolDefine         Define
 hi def link elixirImplDefine             Define
